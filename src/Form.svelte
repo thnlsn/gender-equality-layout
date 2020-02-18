@@ -1,14 +1,18 @@
 <script>
-  export let application;
-  export let description;
+  export let application; // allow application to be passed in as prop
+  export let description; // allow description to be passed in as prop
+
+  function scrape() {
+    // This is where the scraping logic should go (or in its own JS file)
+  }
 </script>
 
 <style>
   .form-card {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    max-width: 35rem;
+    max-width: 40rem;
     border-radius: 5px;
-    margin: 1rem auto;
+    margin: 2rem auto 1rem auto;
   }
 
   header {
@@ -51,6 +55,10 @@
 
   button {
     float: right;
+  }
+
+  button:hover {
+    background-color: rgb(236, 236, 236);
   }
 </style>
 
