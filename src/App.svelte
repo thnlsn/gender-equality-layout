@@ -1,18 +1,14 @@
 <script>
   /*   export let name; */
+  import Form from "./Form.svelte";
+  let site = "//www.red/";
 </script>
 
 <style>
-  /*   h1 {
-    color: purple;
-  } */
+
 </style>
 
-<div class="row no-gutters">
-  <div class="col">
-    <div class="left-side" />
-  </div>
-  <div class="col">
-    <div class="right-side" />
-  </div>
+<div class="container-fluid no-gutters">
+  <Form />
+
 </div>
