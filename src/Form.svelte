@@ -1,11 +1,12 @@
 <script>
-  export let site;
+  export let application;
+  export let description;
 </script>
 
 <style>
-  .contact-card {
+  .form-card {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    max-width: 30rem;
+    max-width: 35rem;
     border-radius: 5px;
     margin: 1rem auto;
   }
@@ -14,21 +15,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 7rem;
+    min-height: 7rem;
   }
 
-  img {
+  .app-data {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .user-data {
-    width: 67%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 1rem;
+    padding: 0 1rem;
+  }
+
+  .input-bar {
+    width: 85%;
   }
 
   h1 {
@@ -49,18 +48,22 @@
     border-top: 1px solid #ccc;
     padding: 1rem;
   }
+
+  button {
+    float: right;
+  }
 </style>
 
-<div class="contact-card">
+<div class="form-card">
   <header>
-    <div class="user-data">
-      <h1>Welcome to Equity Scraper</h1>
-      <h2>blah</h2>
+    <div class="app-data">
+      <h1>Welcome to {application}</h1>
+      <h2>{description}</h2>
     </div>
   </header>
   <div class="submit-wrapper">
     <form action="submit">
-      <input type="text" placeholder="URL to scrape" />
+      <input class="input-bar" type="text" placeholder="URL to scrape" />
       <button>Scrape</button>
     </form>
   </div>
