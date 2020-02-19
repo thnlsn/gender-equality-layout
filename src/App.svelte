@@ -7,6 +7,7 @@
 
   let application = "Equity Audit Tool";
   let description = `${application} aims to put an end to sexism in language by taking in a website URL and scraping it for gender-marked terms. For example, "fireman" or "mankind" would be considered marked for their referral to men specifically, and could be replaced with "firefighter" or "humankind" respectively.`;
+  let source = "//www.red.com";
 </script>
 
 <style>
@@ -29,14 +30,14 @@
   <div class="content-wrapper row">
     <div class="col-lg-5 left">
       <div class="col-lg-12 right">
-        <Form {application} {description} />
+        <Form {application} {description} {source} />
       </div>
       <div class="col-lg-12">
         <Info />
       </div>
     </div>
     <div class="col-lg-7">
-      <Frame />
+      <Frame {source} />
     </div>
   </div>
 </div>

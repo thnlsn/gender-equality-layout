@@ -1,5 +1,5 @@
 <script>
-
+  export let source;
 </script>
 
 <style>
@@ -9,10 +9,12 @@
     height: 78vh;
     background-color: white;
   }
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
 </style>
 
 <div class="iframe-wrapper">
-  <p style="text-align:center">
-    iframe with scraped webpage live and with terms highlighted (if possible)
-  </p>
+  <iframe src={source} frameborder="0" />
 </div>

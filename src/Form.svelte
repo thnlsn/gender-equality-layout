@@ -2,6 +2,8 @@
   export let application; // allow application to be passed in as prop
   export let description; // allow description to be passed in as prop
 
+  export let source;
+
   function scrape() {
     // This is where the scraping logic should go (or in its own JS file)
   }
@@ -71,8 +73,12 @@
   </header>
   <div class="submit-wrapper">
     <form action="submit">
-      <input class="input-bar" type="text" placeholder="URL to scrape" />
-      <button>Scrape</button>
+      <input
+        class="input-bar"
+        type="text"
+        placeholder="URL to scrape"
+        value={source} />
+      <button on:click={scrape}>Scrape</button>
     </form>
   </div>
 </div>
