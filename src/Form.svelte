@@ -31,7 +31,7 @@
   }
 
   .input-bar {
-    width: 85%;
+    width: 84%;
   }
 
   h1 {

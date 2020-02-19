@@ -6,7 +6,7 @@
   .iframe-wrapper {
     border: #727272 dotted 1px;
     margin: 2rem 2rem 2rem 2rem;
-    height: 76vh;
+    height: 78vh;
     background-color: white;
   }
 </style>

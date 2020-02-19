@@ -1,12 +1,11 @@
 <script>
-  /*   export let name; */
   import Navbar from "./Navbar.svelte";
   import Sidebar from "./Sidebar.svelte";
   import Form from "./Form.svelte";
   import Info from "./Info.svelte";
   import Frame from "./Frame.svelte";
 
-  let application = "Gender-Equity Project";
+  let application = "Equity Audit Tool";
   let description = `${application} aims to put an end to sexism in language by taking in a website URL and scraping it for gender-marked terms. For example, "fireman" or "mankind" would be considered marked for their referral to men specifically, and could be replaced with "firefighter" or "humankind" respectively.`;
 </script>
 
@@ -17,6 +16,7 @@
   }
   .content-wrapper {
     height: 100vh;
+    padding: 0 2rem 0 2rem;
   }
   .left,
   .right {
