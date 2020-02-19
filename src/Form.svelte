@@ -1,17 +1,31 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
+
   export let application; // allow application to be passed in as prop
   export let description; // allow description to be passed in as prop
 
   export let source;
 
-  function scrape() {
+  const scrape = e => {
+    console.log(source);
+    /*     e.preventDefault(); */
+    dispatch("scrape", source);
+    source = "//www.red.com";
+  };
+
+  /*   function scrape() {
+    let input = document.querySelector(`.input-bar`);
+    console.log(input.value);
+    source = input.value;
     // This is where the scraping logic should go (or in its own JS file)
-  }
+  } */
 </script>
 
 <style>
   .form-card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 2px 8px #00000042;
     max-width: 40rem;
     border-radius: 5px;
     margin: 2rem auto 1rem auto;
@@ -72,13 +86,11 @@
     </div>
   </header>
   <div class="submit-wrapper">
-    <form action="submit">
-      <input
-        class="input-bar"
-        type="text"
-        placeholder="URL to scrape"
-        value={source} />
-      <button on:click={scrape}>Scrape</button>
-    </form>
+    <input
+      class="input-bar"
+      type="text"
+      placeholder="URL to scrape"
+      bind:value={source} />
+    <button type="submit" on:click={scrape}>Scrape</button>
   </div>
 </div>

@@ -7,7 +7,13 @@
 
   let application = "Equity Audit Tool";
   let description = `${application} aims to put an end to sexism in language by taking in a website URL and scraping it for gender-marked terms. For example, "fireman" or "mankind" would be considered marked for their referral to men specifically, and could be replaced with "firefighter" or "humankind" respectively.`;
-  let source = "//www.red.com";
+  let source = "//www.youtube.com";
+
+  const scrape = e => {
+    const newSource = e.detail; // detail is what we dispatched in addplayer
+    console.log(e.detail);
+    source = newSource; // players is immutable (like state in react), so we have to spread out a copy and add the new thing to it
+  };
 </script>
 
 <style>
@@ -33,7 +39,7 @@
         <Form {application} {description} {source} />
       </div>
       <div class="col-lg-12">
-        <Info />
+        <Info on:scrape{scrape} />
       </div>
     </div>
     <div class="col-lg-7">
